@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.io/LordUnloved/FlashCard-pj",
   "name": "project-flashcards",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
     "docker:test": "docker run -t  thinkful-ed/zid-fe-project-flashcards-01-qualified npm test",
     "eject": "react-scripts eject",
     "start": "concurrently \"npm run start:server\" \"npm run start:react\"",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "start:react": "react-scripts start",
     "start:server": "json-server --no-cors ./data/db.json",
     "start:solution": "npm run -it docker:build && npm run docker:run",
